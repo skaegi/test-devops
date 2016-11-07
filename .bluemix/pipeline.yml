@@ -17,9 +17,6 @@ stages:
 
         echo "test"
 
-
-
-
 - name: Build Docker Image
   inputs:
   - type: job
@@ -37,7 +34,7 @@ stages:
       space: ${SPACE}
     IMAGE_NAME: ${NAME}
     USE_CACHED_LAYERS: 'true'
-    COMMAND: |-
+    script: |-
         #!/bin/bash
         # The following colors have been defined to help with presentation of logs: green, red, label_color, no_color.
         log_and_echo "$LABEL" "Starting build script"
@@ -185,4 +182,4 @@ stages:
             ${EXT_DIR}/print_help.sh
             exit $RESULT
         fi
-        echo -e "${green}Execution complete${no_label}"
+        echo -e "${green}Execution complete${no_label}"«»
