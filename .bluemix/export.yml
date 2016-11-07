@@ -1,0 +1,41 @@
+---
+stages:
+- name: Build Java Projects
+  inputs:
+  - url: https://github.com/ibm-cloud-architecture/refarch-cloudnative-netflix-eureka.git
+    type: git
+    branch: BUILD
+    dir_name: null
+  properties:
+  - name: DOCKER_DIR
+    value: docker
+    type: text
+  - name: BUILD_TARGET
+    value: build/libs/eureka-0.0.1-SNAPSHOT.jar
+    type: text
+  - name: YML_FILE
+    value: src/main/resources/application.yml
+    type: text
+  jobs:
+  - name: Build java
+    type: builder
+    artifact_dir: ''
+    build_type: shell
+    script: |-
+      #!/bin/bash
+      set -x
+      echo "Run gradle build..."
+      export JAVA_HOME=~/java8
+      export PATH=$JAVA_HOME/bin:$PATH
+
+      /bin/bash build-microservice.sh
+      cp ${BUILD_TARGET} docker/app.jar
+      ls -al $PWD
+      echo "Gradle build complete."
+      set +x
+
+hooks:
+- enabled: true
+  label: null
+  ssl_enabled: false
+  url: https://devops-api.ng.bluemix.net/v1/messaging/webhook/publish
