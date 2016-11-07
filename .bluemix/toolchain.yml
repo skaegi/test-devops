@@ -12,7 +12,7 @@ git-wfd-eureka:
   parameters:
     repo_name: "test-devops-clone"
     repo_url: https://github.com/ibm-cloud-architecture/refarch-cloudnative-netflix-eureka
-    type: clone
+    type: link
     has_issues: false
 
 
