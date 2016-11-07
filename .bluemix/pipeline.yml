@@ -14,5 +14,4 @@ stages:
     build_type: shell
     script: |
         #!/bin/bash
-
         echo "test"
