@@ -6,8 +6,6 @@ stages:
     type: git
     branch: BUILD
     dir_name: null
-  triggers:
-  - type: manual
   jobs:
   - name: Build Java
     type: builder
