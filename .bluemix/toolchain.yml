@@ -23,7 +23,7 @@ pipeline-wfd-eureka:
     name: "wfd-eureka"
     ui-pipeline: true
     configuration:
-      content: $file(export.yml)
+      content: $file(pipeline.yml)
       env:
        # Build java stage env variables
        DOCKER_DIR: "docker"
