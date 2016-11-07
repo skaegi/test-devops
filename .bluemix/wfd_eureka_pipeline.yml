@@ -2,9 +2,9 @@
 stages:
 - name: Build Java Projects
   inputs:
-  - service: ${REPO}
+  - url: ${REPO}
     type: git
-    branch: master
+    branch: BUILD
     dir_name: null
   triggers:
   - type: commit
@@ -24,3 +24,8 @@ stages:
         cp ${BUILD_TARGET} ${DOCKER_DIR}/app.jar
         ls -al $PWD
         echo "Gradle build complete."
+hooks:
+- enabled: true
+  label: null
+  ssl_enabled: false
+  url: https://devops-api.ng.bluemix.net/v1/messaging/webhook/publish
