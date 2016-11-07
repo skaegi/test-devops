@@ -11,64 +11,9 @@ git-wfd-eureka:
   parameters:
     repo_name: "eureka-toolchain-test"
     repo_url: "https://github.com/ibm-cloud-architecture/refarch-cloudnative-netflix-eureka"
-    type: clone
+    type: link
     has_issues: false
 
-#git-wfd-zuul:
-#  service_id: githubpublic
-#  parameters:
-#    repo_name: "refarch-cloudnative-netflix-zuul-{{name}}"
-#    repo_url: "https://github.com/ibm-cloud-architecture/refarch-cloudnative-netflix-zuul"
-#    type: clone
-#    has_issues: false
-#
-#git-wfd-config-server:
-#  service_id: githubpublic
-#  parameters:
-#    repo_name: "refarch-cloudnative-spring-config-{{name}}"
-#    repo_url: "https://github.com/ibm-cloud-architecture/refarch-cloudnative-spring-config"
-#    type: clone
-#    has_issues: false
-#
-#git-wfd-menu-ui:
-#  service_id: githubpublic
-#  parameters:
-#    repo_name: "refarch-cloudnative-wfd-ui-{{name}}"
-#    repo_url: "https://github.com/ibm-cloud-architecture/refarch-cloudnative-netflix-zuul"
-#    type: clone
-#    has_issues: false
-#
-#git-wfd-menu:
-#  service_id: githubpublic
-#  parameters:
-#    repo_name: "refarch-cloudnative-netflix-zuul-{{name}}"
-#    repo_url: "https://github.com/ibm-cloud-architecture/refarch-cloudnative-wfd-ui"
-#    type: clone
-#    has_issues: false
-#
-#git-wfd-appetizer:
-#  service_id: githubpublic
-#  parameters:
-#    repo_name: "refarch-cloudnative-wfd-appetizer-{{name}}"
-#    repo_url: "https://github.com/ibm-cloud-architecture/refarch-cloudnative-wfd-appetizer"
-#    type: clone
-#    has_issues: false
-#
-#git-wfd-entree:
-#  service_id: githubpublic
-#  parameters:
-#    repo_name: "refarch-cloudnative-wfd-entree-{{name}}"
-#    repo_url: "https://github.com/ibm-cloud-architecture/refarch-cloudnative-wfd-entree"
-#    type: clone
-#    has_issues: false
-#
-#git-wfd-dessert:
-#  service_id: githubpublic
-#  parameters:
-#    repo_name: "refarch-cloudnative-wfd-dessert-{{name}}"
-#    repo_url: "https://github.com/ibm-cloud-architecture/refarch-cloudnative-wfd-dessert"
-#    type: clone
-#    has_issues: false
 
 
 pipeline-wfd-eureka:
