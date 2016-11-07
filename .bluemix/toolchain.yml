@@ -9,9 +9,9 @@ required:
 git-wfd-eureka:
   service_id: githubpublic
   parameters:
-    repo_name: "eureka-toolchain-test"
+    repo_name: "test-devops-clone"
     repo_url: "https://github.com/ibm-cloud-architecture/refarch-cloudnative-netflix-eureka"
-    type: link
+    type: clone
     has_issues: false
 
 
