@@ -4,7 +4,7 @@ stages:
   inputs:
   - type: git
     branch: BUILD
-    service: "test-devops-clone"
+    service: ${REPO}
   triggers:
   - type: commit
   jobs:
