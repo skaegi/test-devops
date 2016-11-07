@@ -7,6 +7,13 @@ stages:
     service: ${REPO}
   triggers:
   - type: commit
+  properties:
+  - name: DOCKER_DIR
+    value: ${DOCKER_DIR}
+    type: text
+  - name: BUILD_TARGET
+    value: ${BUILD_TARGET}
+    type: text
   jobs:
   - name: Build Java
     type: builder
@@ -14,4 +21,12 @@ stages:
     build_type: shell
     script: |
         #!/bin/bash
-        echo "test"
+        echo "Run gradle build..."
+        export JAVA_HOME=~/java8
+        export PATH=$JAVA_HOME/bin:$PATH
+        echo "$BUILD_TARGET"
+        echo "$DOCKER_DIR"
+        #/bin/bash build-microservice.sh
+        #cp ${BUILD_TARGET} ${DOCKER_DIR}/app.jar
+        #ls -al $PWD
+        echo "Gradle build complete."
