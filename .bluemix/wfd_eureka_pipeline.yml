@@ -7,7 +7,7 @@ stages:
     branch: BUILD
     dir_name: null
   triggers:
-  - type: commit
+  - type: manual
   jobs:
   - name: Build Java
     type: builder
@@ -16,16 +16,4 @@ stages:
     script: |-
         #!/bin/bash
 
-        echo "Run gradle build..."
-        export JAVA_HOME=~/java8
-        export PATH=$JAVA_HOME/bin:$PATH
-
-        /bin/bash build-microservice.sh
-        cp ${BUILD_TARGET} ${DOCKER_DIR}/app.jar
-        ls -al $PWD
-        echo "Gradle build complete."
-hooks:
-- enabled: true
-  label: null
-  ssl_enabled: false
-  url: https://devops-api.ng.bluemix.net/v1/messaging/webhook/publish
+        echo "test"
