@@ -2,7 +2,7 @@
 stages:
 - name: Build Java Projects
   inputs:
-  - url: ${REPO}
+  - url: https://github.com/ibm-cloud-architecture/refarch-cloudnative-netflix-eureka.git
     type: git
     branch: BUILD
     dir_name: null
