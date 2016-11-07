@@ -2,10 +2,11 @@
 stages:
 - name: Build Java Projects
   inputs:
-  - url: https://github.com/ibm-cloud-architecture/refarch-cloudnative-netflix-eureka.git
+  - services: ${REPO}
     type: git
     branch: BUILD
-    dir_name: null
+  triggers:
+  - type: commit
   jobs:
   - name: Build Java
     type: builder
