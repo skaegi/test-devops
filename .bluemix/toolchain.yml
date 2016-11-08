@@ -166,7 +166,7 @@ pipeline-wfd-appetizer:
        IGNORE_MAPPING_ROUTE: "yes"
        BRIDGE_APP: "container_brige_app"
        ROUTE_DOMAIN: "{{deploy.parameters.route-domain}}"
-       ROUTE_DOMAIN: "{{deploy.parameters.route-hostname}}"
+       ROUTE_HOSTNAME: "{{deploy.parameters.route-hostname}}"
       execute: false
     services: ["git-wfd-appetizer"]
   hidden: [form, description]
@@ -200,7 +200,7 @@ pipeline-wfd-entree:
        IGNORE_MAPPING_ROUTE: "yes"
        BRIDGE_APP: "container_brige_app"
        ROUTE_DOMAIN: "{{deploy.parameters.route-domain}}"
-       ROUTE_DOMAIN: "{{deploy.parameters.route-hostname}}"
+       ROUTE_HOSTNAME: "{{deploy.parameters.route-hostname}}"
       execute: false
     services: ["git-wfd-entree"]
   hidden: [form, description]
@@ -234,7 +234,7 @@ pipeline-wfd-dessert:
        IGNORE_MAPPING_ROUTE: "yes"
        BRIDGE_APP: "container_brige_app"
        ROUTE_DOMAIN: "{{deploy.parameters.route-domain}}"
-       ROUTE_DOMAIN: "{{deploy.parameters.route-hostname}}"
+       ROUTE_HOSTNAME: "{{deploy.parameters.route-hostname}}"
       execute: false
     services: ["git-wfd-dessert"]
   hidden: [form, description]
@@ -268,7 +268,7 @@ pipeline-wfd-menu:
        IGNORE_MAPPING_ROUTE: "yes"
        BRIDGE_APP: "container_brige_app"
        ROUTE_DOMAIN: "{{deploy.parameters.route-domain}}"
-       ROUTE_DOMAIN: "{{deploy.parameters.route-hostname}}"
+       ROUTE_HOSTNAME: "{{deploy.parameters.route-hostname}}"
       execute: false
     services: ["git-wfd-menu"]
   hidden: [form, description]
@@ -302,7 +302,7 @@ pipeline-wfd-zuul:
        IGNORE_MAPPING_ROUTE: "yes"
        BRIDGE_APP: "container_brige_app"
        ROUTE_DOMAIN: "{{deploy.parameters.route-domain}}"
-       ROUTE_DOMAIN: "{{deploy.parameters.route-hostname}}"
+       ROUTE_HOSTNAME: "{{deploy.parameters.route-hostname}}"
       execute: false
     services: ["git-wfd-zuul"]
   hidden: [form, description]
@@ -336,7 +336,7 @@ pipeline-wfd-menu-ui:
        IGNORE_MAPPING_ROUTE: " "
        BRIDGE_APP: "container_brige_app"
        ROUTE_DOMAIN: "{{deploy.parameters.route-domain}}"
-       ROUTE_DOMAIN: "{{deploy.parameters.route-hostname}}"
+       ROUTE_HOSTNAME: "{{deploy.parameters.route-hostname}}"
       execute: false
     services: ["git-wfd-menu-ui"]
   hidden: [form, description]
