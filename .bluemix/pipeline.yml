@@ -177,7 +177,7 @@ stages:
       organization: ${ORG}
       space: ${SPACE}
     DEPLOY_TYPE: simple
-    PORT: '8761'
+    PORT: ${PORT}
     CONTAINER_NAME: ${NAME}
     COMMAND: |-
        #!/bin/bash
