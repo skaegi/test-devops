@@ -44,6 +44,18 @@ stages:
   - name: DOCKER_DIR
     value: ${DOCKER_DIR}
     type: text
+  - name: REGION
+    value: ${REGION}
+    type: text
+  - name: ORG
+    value: ${ORG}
+    type: text
+  - name: SPACE
+    value: ${SPACE}
+    type: text
+  - name: NAME
+    value: ${NAME}
+    type: text
   jobs:
   - name: Build container
     type: builder
