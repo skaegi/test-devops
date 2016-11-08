@@ -127,7 +127,7 @@ stages:
   - type: stage
   properties:
   - name: MIN_INSTANCES
-    value: '1'
+    value: ${MIN_INSTANCES}
     type: text
   - name: MAX_INSTANCES
     value: '2'
@@ -177,7 +177,7 @@ stages:
       organization: ${ORG}
       space: ${SPACE}
     DEPLOY_TYPE: simple
-    PORT: ${PORT}
+    PORT: '8761'
     CONTAINER_NAME: ${NAME}
     COMMAND: |-
        #!/bin/bash
