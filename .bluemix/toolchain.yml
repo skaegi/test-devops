@@ -205,7 +205,7 @@ pipeline-wfd-dessert:
     name: "wfd-dessert"
     ui-pipeline: true
     configuration:
-      content: $file(wfd-template.yml)
+      content: $file(dessert.yml)
       env:
        # Build java stage env variables
        DOCKER_DIR: "docker"
