@@ -239,7 +239,6 @@ stages:
             exit $RESULT
         fi
         echo -e "${green}Execution complete${no_label}"
-        
   - name: Deploy CUPS
     type: deployer
     extension_id: ibm.devops.services.pipeline.docker.deploy.ice
