@@ -157,8 +157,8 @@ pipeline-wfd-appetizer:
        CONTAINER_SIZE: "micro"
        IGNORE_MAPPING_ROUTE: "yes"
        BRIDGE_APP: "container_brige_app"
-       ROUTE_DOMAIN: ""
-       ROUTE_HOSTNAME: ""
+       #ROUTE_DOMAIN: ""
+       #ROUTE_HOSTNAME: ""
       execute: false
     services: ["git-wfd-appetizer"]
   hidden: [form, description]
@@ -191,8 +191,8 @@ pipeline-wfd-entree:
        CONTAINER_SIZE: "micro"
        IGNORE_MAPPING_ROUTE: "yes"
        BRIDGE_APP: "container_brige_app"
-       ROUTE_DOMAIN: ""
-       ROUTE_HOSTNAME: ""
+       #ROUTE_DOMAIN: ""
+       #ROUTE_HOSTNAME: ""
       execute: false
     services: ["git-wfd-entree"]
   hidden: [form, description]
@@ -225,8 +225,8 @@ pipeline-wfd-dessert:
        CONTAINER_SIZE: "micro"
        IGNORE_MAPPING_ROUTE: "yes"
        BRIDGE_APP: "container_brige_app"
-       ROUTE_DOMAIN: ""
-       ROUTE_HOSTNAME: ""
+       #ROUTE_DOMAIN: ""
+       #ROUTE_HOSTNAME: ""
       execute: false
     services: ["git-wfd-dessert"]
   hidden: [form, description]
@@ -259,8 +259,8 @@ pipeline-wfd-menu:
        CONTAINER_SIZE: "micro"
        IGNORE_MAPPING_ROUTE: "yes"
        BRIDGE_APP: "container_brige_app"
-       ROUTE_DOMAIN: ""
-       ROUTE_HOSTNAME: ""
+       #ROUTE_DOMAIN: ""
+       #ROUTE_HOSTNAME: ""
       execute: false
     services: ["git-wfd-menu"]
   hidden: [form, description]
@@ -293,8 +293,8 @@ pipeline-wfd-zuul:
        CONTAINER_SIZE: "micro"
        IGNORE_MAPPING_ROUTE: "yes"
        BRIDGE_APP: "container_brige_app"
-       ROUTE_DOMAIN: ""
-       ROUTE_HOSTNAME: ""
+       #ROUTE_DOMAIN: ""
+       #ROUTE_HOSTNAME: ""
       execute: false
     services: ["git-wfd-zuul"]
   hidden: [form, description]
