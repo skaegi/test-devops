@@ -36,16 +36,16 @@ pipeline-wfd-eureka:
        NAME: "{{pipeline-wfd-eureka.parameters.name}}"
        LABEL_PREFIX: "toolchain"
        # Deploy stage env variables
-       PORT: "8761"
-       MIN_INSTANCES: "1"
-       MAX_INSTANCES: "2"
-       DESIRED_INSTANCES: "1"
-       CONCURRENT_VERSIONS: "1"
-       AUTO_RECOVERY: false
-       CONTAINER_SIZE: "micro"
-       IGNORE_MAPPING_ROUTE: "true"
-       SERVICE_DISCOVERY_UPS: "eureka-service-discovery"
-       BRIDGE_APP: "container_brige_app"
+       #PORT: "8761"
+       #MIN_INSTANCES: "1"
+       #MAX_INSTANCES: "2"
+       #DESIRED_INSTANCES: "1"
+       #CONCURRENT_VERSIONS: "1"
+       #AUTO_RECOVERY: false
+       #CONTAINER_SIZE: "micro"
+       #IGNORE_MAPPING_ROUTE: "true"
+       #SERVICE_DISCOVERY_UPS: "eureka-service-discovery"
+       #BRIDGE_APP: "container_brige_app"
       execute: false
     services: ["git-wfd-eureka"]
   hidden: [form, description]
