@@ -127,16 +127,16 @@ stages:
   - type: stage
   properties:
   - name: MIN_INSTANCES
-    value: 1
+    value: '1'
     type: text
   - name: MAX_INSTANCES
-    value: 2
+    value: '2'
     type: text
   - name: DESIRED_INSTANCES
-    value: 1
+    value: '1'
     type: text
   - name: CONCURRENT_VERSIONS
-    value: 1
+    value: '1'
     type: text
   - name: AUTO_RECOVERY
     value: ${AUTO_RECOVERY}
@@ -174,7 +174,7 @@ stages:
       organization: ${ORG}
       space: ${SPACE}
     DEPLOY_TYPE: simple
-    PORT: 8761
+    PORT: '8761'
     CONTAINER_NAME: ${NAME}
     COMMAND: |-
        #!/bin/bash
