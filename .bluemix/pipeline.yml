@@ -166,7 +166,7 @@ stages:
     value: ${NAME}
     type: text
   - name: PORT
-    value: '8761'
+    value: ${PORT}
     type: text
   jobs:
   - name: Deploy
