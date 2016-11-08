@@ -145,7 +145,7 @@ stages:
     value: ${CONTAINER_SIZE}
     type: text
   - name: IGNORE_MAPPING_ROUTE
-    value: 'true'
+    value: ${IGNORE_MAPPING_ROUTE}
     type: text
   - name: BRIDGE_APP
     value: ${BRIDGE_APP}

@@ -137,7 +137,7 @@ pipeline-wfd-appetizer:
     name: "wfd-appetizer"
     ui-pipeline: true
     configuration:
-      content: $file(appetizer.yml)
+      content: $file(wfd-template.yml)
       env:
        # Build java stage env variables
        DOCKER_DIR: "docker"
@@ -157,8 +157,10 @@ pipeline-wfd-appetizer:
        CONCURRENT_VERSIONS: "1"
        #AUTO_RECOVERY: "false"
        CONTAINER_SIZE: "micro"
-       #IGNORE_MAPPING_ROUTE: "true"
+       IGNORE_MAPPING_ROUTE: "yes"
        BRIDGE_APP: "container_brige_app"
+       ROUTE_DOMAIN:''
+       ROUTE_HOSTNAME:''
       execute: false
     services: ["git-wfd-appetizer"]
   hidden: [form, description]
@@ -169,7 +171,7 @@ pipeline-wfd-entree:
     name: "wfd-entree"
     ui-pipeline: true
     configuration:
-      content: $file(entree.yml)
+      content: $file(wfd-template.yml)
       env:
        # Build java stage env variables
        DOCKER_DIR: "docker"
@@ -189,8 +191,10 @@ pipeline-wfd-entree:
        CONCURRENT_VERSIONS: "1"
        #AUTO_RECOVERY: "false"
        CONTAINER_SIZE: "micro"
-       #IGNORE_MAPPING_ROUTE: "true"
+       IGNORE_MAPPING_ROUTE: "yes"
        BRIDGE_APP: "container_brige_app"
+       ROUTE_DOMAIN:''
+       ROUTE_HOSTNAME:''
       execute: false
     services: ["git-wfd-entree"]
   hidden: [form, description]
@@ -201,7 +205,7 @@ pipeline-wfd-dessert:
     name: "wfd-dessert"
     ui-pipeline: true
     configuration:
-      content: $file(dessert.yml)
+      content: $file(wfd-template.yml)
       env:
        # Build java stage env variables
        DOCKER_DIR: "docker"
@@ -221,8 +225,10 @@ pipeline-wfd-dessert:
        CONCURRENT_VERSIONS: "1"
        #AUTO_RECOVERY: "false"
        CONTAINER_SIZE: "micro"
-       #IGNORE_MAPPING_ROUTE: "true"
+       IGNORE_MAPPING_ROUTE: "yes"
        BRIDGE_APP: "container_brige_app"
+       ROUTE_DOMAIN:''
+       ROUTE_HOSTNAME:''
       execute: false
     services: ["git-wfd-dessert"]
   hidden: [form, description]
@@ -233,7 +239,7 @@ pipeline-wfd-menu:
     name: "wfd-menu"
     ui-pipeline: true
     configuration:
-      content: $file(menu.yml)
+      content: $file(wfd-template.yml)
       env:
        # Build java stage env variables
        DOCKER_DIR: "docker"
@@ -253,8 +259,10 @@ pipeline-wfd-menu:
        CONCURRENT_VERSIONS: "1"
        #AUTO_RECOVERY: "false"
        CONTAINER_SIZE: "micro"
-       #IGNORE_MAPPING_ROUTE: "true"
+       IGNORE_MAPPING_ROUTE: "yes"
        BRIDGE_APP: "container_brige_app"
+       ROUTE_DOMAIN:''
+       ROUTE_HOSTNAME:''
       execute: false
     services: ["git-wfd-menu"]
   hidden: [form, description]
@@ -265,7 +273,7 @@ pipeline-wfd-zuul:
     name: "wfd-zuul"
     ui-pipeline: true
     configuration:
-      content: $file(zuul.yml)
+      content: $file(wfd-template.yml)
       env:
        # Build java stage env variables
        DOCKER_DIR: "docker"
@@ -285,8 +293,10 @@ pipeline-wfd-zuul:
        CONCURRENT_VERSIONS: "1"
        #AUTO_RECOVERY: "false"
        CONTAINER_SIZE: "micro"
-       #IGNORE_MAPPING_ROUTE: "true"
+       IGNORE_MAPPING_ROUTE: "yes"
        BRIDGE_APP: "container_brige_app"
+       ROUTE_DOMAIN:''
+       ROUTE_HOSTNAME:''
       execute: false
     services: ["git-wfd-zuul"]
   hidden: [form, description]

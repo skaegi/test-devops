@@ -168,6 +168,12 @@ stages:
   - name: PORT
     value: ${PORT}
     type: text
+  - name: ROUTE_DOMAIN
+    value: ${ROUTE_DOMAIN}
+    type: text
+  - name: ROUTE_HOSTNAME
+    value: ${ROUTE_HOSTNAME}
+    type: text
   jobs:
   - name: Deploy
     type: deployer
