@@ -99,7 +99,7 @@ git-wfd-menu-ui:
 #       CONTAINER_SIZE: "micro"
 #       #IGNORE_MAPPING_ROUTE: "true"
 #       SERVICE_DISCOVERY_UPS: "eureka-service-discovery"
-#       BRIDGE_APP: "container_brige_app"
+#       BRIDGE_APP: "container_bridge_app"
 #      execute: false
 #    services: ["git-wfd-eureka"]
 #  hidden: [form, description]
@@ -132,7 +132,7 @@ git-wfd-menu-ui:
 #       CONTAINER_SIZE: "micro"
 #       #IGNORE_MAPPING_ROUTE: "true"
 #       CONFIG_SERVER_UPS: "config-server-ic"
-#       BRIDGE_APP: "container_brige_app"
+#       BRIDGE_APP: "container_bridge_app"
 #      execute: false
 #    services: ["git-wfd-config-server"]
 #  hidden: [form, description]
@@ -164,7 +164,7 @@ git-wfd-menu-ui:
 #       #AUTO_RECOVERY: "false"
 #       CONTAINER_SIZE: "micro"
 #       IGNORE_MAPPING_ROUTE: "yes"
-#       BRIDGE_APP: "container_brige_app"
+#       BRIDGE_APP: "container_bridge_app"
 #       ROUTE_DOMAIN: null
 #       ROUTE_HOSTNAME: null
 #      execute: false
@@ -198,7 +198,7 @@ git-wfd-menu-ui:
 #       #AUTO_RECOVERY: "false"
 #       CONTAINER_SIZE: "micro"
 #       IGNORE_MAPPING_ROUTE: "yes"
-#       BRIDGE_APP: "container_brige_app"
+#       BRIDGE_APP: "container_bridge_app"
 #       ROUTE_DOMAIN: null
 #       ROUTE_HOSTNAME: null
 #      execute: false
@@ -232,7 +232,7 @@ git-wfd-menu-ui:
 #       #AUTO_RECOVERY: "false"
 #       CONTAINER_SIZE: "micro"
 #       IGNORE_MAPPING_ROUTE: "yes"
-#       BRIDGE_APP: "container_brige_app"
+#       BRIDGE_APP: "container_bridge_app"
 #       ROUTE_DOMAIN: null
 #       ROUTE_HOSTNAME: null
 #      execute: false
@@ -266,7 +266,7 @@ git-wfd-menu-ui:
 #       #AUTO_RECOVERY: "false"
 #       CONTAINER_SIZE: "micro"
 #       IGNORE_MAPPING_ROUTE: "yes"
-#       BRIDGE_APP: "container_brige_app"
+#       BRIDGE_APP: "container_bridge_app"
 #       ROUTE_DOMAIN: null
 #       ROUTE_HOSTNAME: null
 #      execute: false
@@ -300,7 +300,7 @@ git-wfd-menu-ui:
 #       #AUTO_RECOVERY: "false"
 #       CONTAINER_SIZE: "micro"
 #       IGNORE_MAPPING_ROUTE: "yes"
-#       BRIDGE_APP: "container_brige_app"
+#       BRIDGE_APP: "container_bridge_app"
 #       ROUTE_DOMAIN: null
 #       ROUTE_HOSTNAME: null
 #      execute: false
@@ -334,7 +334,7 @@ pipeline-wfd-menu-ui:
        #AUTO_RECOVERY: "false"
        CONTAINER_SIZE: "micro"
        IGNORE_MAPPING_ROUTE: null
-       BRIDGE_APP: "container_brige_app"
+       BRIDGE_APP: "container_bridge_app"
        ROUTE_DOMAIN: "{{deploy.parameters.route-domain}}"
        ROUTE_HOSTNAME: "{{deploy.parameters.route-hostname}}"
       execute: false
