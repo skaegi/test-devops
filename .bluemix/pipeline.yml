@@ -165,6 +165,9 @@ stages:
   - name: NAME
     value: ${NAME}
     type: text
+  - name: PORT
+    value: '8761'
+    type: text
   jobs:
   - name: Deploy
     type: deployer
@@ -174,7 +177,7 @@ stages:
       organization: ${ORG}
       space: ${SPACE}
     DEPLOY_TYPE: simple
-    PORT: '8761'
+    PORT: ${PORT}
     CONTAINER_NAME: ${NAME}
     COMMAND: |-
        #!/bin/bash
