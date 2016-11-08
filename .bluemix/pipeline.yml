@@ -130,13 +130,13 @@ stages:
     value: ${MIN_INSTANCES}
     type: text
   - name: MAX_INSTANCES
-    value: '2'
+    value: ${MAX_INSTANCES}
     type: text
   - name: DESIRED_INSTANCES
-    value: '1'
+    value: ${DESIRED_INSTANCES}
     type: text
   - name: CONCURRENT_VERSIONS
-    value: '1'
+    value: ${CONCURRENT_VERSIONS}
     type: text
   - name: AUTO_RECOVERY
     value: 'false'
