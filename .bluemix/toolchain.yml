@@ -333,7 +333,7 @@ pipeline-wfd-menu-ui:
        CONCURRENT_VERSIONS: "1"
        #AUTO_RECOVERY: "false"
        CONTAINER_SIZE: "micro"
-       IGNORE_MAPPING_ROUTE: "bla"
+       IGNORE_MAPPING_ROUTE: null
        BRIDGE_APP: "container_brige_app"
        ROUTE_DOMAIN: "{{deploy.parameters.route-domain}}"
        ROUTE_HOSTNAME: "{{deploy.parameters.route-hostname}}"
