@@ -139,13 +139,13 @@ stages:
     value: '1'
     type: text
   - name: AUTO_RECOVERY
-    value: ${AUTO_RECOVERY}
+    value: 'false'
     type: text
   - name: CONTAINER_SIZE
     value: ${CONTAINER_SIZE}
     type: text
   - name: IGNORE_MAPPING_ROUTE
-    value: ${IGNORE_MAPPING_ROUTE}
+    value: 'true'
     type: text
   - name: SERVICE_DISCOVERY_UPS
     value: ${SERVICE_DISCOVERY_UPS}

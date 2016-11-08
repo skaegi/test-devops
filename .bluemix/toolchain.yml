@@ -41,9 +41,9 @@ pipeline-wfd-eureka:
        #MAX_INSTANCES: "2"
        #DESIRED_INSTANCES: "1"
        #CONCURRENT_VERSIONS: "1"
-       AUTO_RECOVERY: "false"
+       #AUTO_RECOVERY: "false"
        CONTAINER_SIZE: "micro"
-       IGNORE_MAPPING_ROUTE: "true"
+       #IGNORE_MAPPING_ROUTE: "true"
        SERVICE_DISCOVERY_UPS: "eureka-service-discovery"
        BRIDGE_APP: "container_brige_app"
       execute: false
