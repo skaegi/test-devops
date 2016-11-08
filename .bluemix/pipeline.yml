@@ -34,11 +34,15 @@ stages:
   - type: job
     stage: Build Java Projects
     job: Build Java
+    dir_name: null
   triggers:
   - type: stage
   properties:
   - name: LABEL_PREFIX
     value: ${LABEL_PREFIX}
+    type: text
+  - name: DOCKER_DIR
+    value: ${DOCKER_DIR}
     type: text
   jobs:
   - name: Build container
