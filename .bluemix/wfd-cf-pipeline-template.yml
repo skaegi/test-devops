@@ -68,7 +68,7 @@ stages:
       application: ${APP_NAME}
     script: |
       #!/bin/bash
-      cf push ${CF_APP} -p ${BINARY_PATH} -d ${DOMAIN} -n ${APP_ROUTE} --no-start
+      cf push ${CF_APP} -p ${BUILD_TARGET} -d ${DOMAIN} -n ${APP_ROUTE} --no-start
 
       cf set-env ${CF_APP} SPRING_PROFILES_ACTIVE cloud
 
