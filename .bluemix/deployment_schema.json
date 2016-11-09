@@ -35,12 +35,6 @@
             "key": "route-domain"
         },
         {
-            "type": "text",
-            "readonly": false,
-            "title": "Hostname for your app",
-            "key": "route-hostname"
-        },
-        {
             "type": "table",
             "columnCount": 4,
             "widths": ["15%", "28%", "28%", "28%"],
