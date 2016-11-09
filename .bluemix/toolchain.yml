@@ -87,7 +87,7 @@ pipeline-wfd-eureka-cf:
        ORG: "{{deploy.parameters.deploy-org}}"
        SPACE: "{{deploy.parameters.deploy-space}}"
        DOMAIN: "{{deploy.parameters.route-domain}}"
-       APP_NAME: "{{pipeline-wfd-eureka.parameters.name}}"
+       APP_NAME: "{{pipeline-wfd-eureka-cf.parameters.name}}"
        DEPLOYMENT_SUFFIX: "toolchain"
        SERVICE_DISCOVERY_UPS: "eureka-service-discovery"
       execute: false
