@@ -340,5 +340,4 @@ deploy:
     deploy-org: "{{organization}}"
     deploy-space: "{{space}}"
     route-domain: "mybluemix.net"
-    route-hostname: "{{route-hostname}}"
     context-path: "micro"
