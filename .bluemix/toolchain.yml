@@ -127,7 +127,7 @@ pipeline-wfd-appetizer-cf:
       content: $file(wfd-cf-pipeline-template.yml)
       env:
        # Build java stage env variables
-       REPO: "git-wfd-config-server"
+       REPO: "git-wfd-appetizer"
        # Build container stage env variables
        BUILD_TARGET: "build/libs/wfd-appetizer-0.0.1-SNAPSHOT.jar"
        REGION: "{{deploy.parameters.deploy-region}}"
