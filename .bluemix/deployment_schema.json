@@ -20,13 +20,9 @@
         "route-domain": {
             "description": "Domain name. Example: mybluemix.net for runtimes in US-South",
             "type": "string"
-        },
-        "route-hostname": {
-            "description": "Hostname for the app. Example: myappbluemix",
-            "type": "string"
         }
     },
-    "required": ["deploy-region", "deploy-org", "deploy-space", "route-domain", "route-hostname"],
+    "required": ["deploy-region", "deploy-org", "deploy-space", "route-domain"],
     "form": [
         {
             "type": "validator",
