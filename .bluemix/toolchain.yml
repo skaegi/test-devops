@@ -6,7 +6,7 @@ required:
  - deploy
 
 #Github repos
-git-wfd-eureka:
+git-wfd-eureka-cf:
   service_id: githubpublic
   parameters:
     repo_name: "eureka-cf-clone"
