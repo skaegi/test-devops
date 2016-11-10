@@ -31,25 +31,25 @@ stages:
   - type: stage
   properties:
   - name: BUILD_TARGET
-    value: build/libs/wfd-appetizer-0.0.1-SNAPSHOT.jar
+    value: 'build/libs/wfd-appetizer-0.0.1-SNAPSHOT.jar'
     type: text
   - name: CONFIG_SERVER_UPS
-    value: config-server-cf
+    value: 'config-server-cf'
     type: text
   - name: SERVICE_DISCOVERY_UPS
-    value: eureka-service-discovery
+    value: 'eureka-service-discovery'
     type: text
   - name: AD_INSTANCE_NAME
-    value: Active\ Depoy-r6
+    value: 'Active\ Depoy-r6'
     type: text
   - name: TEST_RESULT_FOR_AD
-    value: ''
+    value: null
     type: text
   - name: GROUP_SIZE
     value: '1'
     type: text
   - name: NAME
-    value: ''
+    value: null
     type: text
   jobs:
   - name: Deploy app
