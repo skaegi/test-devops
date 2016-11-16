@@ -61,17 +61,16 @@
                 },
                 {
                     "type": "select",
-                    "key": "deploy-region"
+                    "key": "dev-region"
                 },
                 {
                     "type": "select",
-                    "key": "deploy-org"
+                    "key": "dev-org"
                 },
                 {
                     "type": "select",
-                    "key": "deploy-space",
-                    "readonly": false,
-                    "default": "blablabla"
+                    "key": "dev-space",
+                    "readonly": false
                 }
             ]
         }
