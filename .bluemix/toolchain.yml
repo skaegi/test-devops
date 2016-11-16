@@ -319,7 +319,7 @@ deploy:
     #deploy-region: "{{region}}"
     #deploy-org: "{{organization}}"
     #deploy-space: "{{space}}"
-    route-domain: "mybluemix.net"
+    route-domain: "{{domain}}"
     context-path: "micro"
 deploybis:
   schema:
