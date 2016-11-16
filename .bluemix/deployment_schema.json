@@ -17,12 +17,12 @@
             "description": "Deploy to this space",
             "type": "string"
         },
-        "route-domain": {
+        "deploy-domain": {
             "description": "Domain name. Example: mybluemix.net for runtimes in US-South",
             "type": "string"
         }
     },
-    "required": ["deploy-region", "deploy-org", "deploy-space", "route-domain"],
+    "required": ["deploy-region", "deploy-org", "deploy-space", "deploy-domain"],
     "form": [
         {
             "type": "validator",
@@ -32,7 +32,7 @@
             "type": "text",
             "readonly": false,
             "title": "Domain name for all routes",
-            "key": "route-domain"
+            "key": "deploy-domain"
         },
         {
             "type": "table",

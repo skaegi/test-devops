@@ -318,5 +318,5 @@ deploy:
     deploy-region: "{{region}}"
     deploy-org: "{{organization}}"
     deploy-space: "{{space}}"
-    route-domain: "{{domain}}"
+    deploy-domain: "{{domain}}"
     context-path: "micro"
