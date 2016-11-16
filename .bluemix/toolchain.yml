@@ -4,7 +4,6 @@ description: "Microservices Cloud Foundry reference application Toolchain"
 version: 0.1
 required:
  - deploy
- - deploybis
 
 #Github repos
 git-wfd-eureka:
