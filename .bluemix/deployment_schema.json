@@ -70,7 +70,8 @@
                 {
                     "type": "select",
                     "key": "deploy-space",
-                    "readonly": false
+                    "readonly": false,
+                    "default": "blablabla"
                 }
             ]
         }
