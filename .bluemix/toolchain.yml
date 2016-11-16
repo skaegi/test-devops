@@ -322,6 +322,6 @@ deploy:
     deploy-region: "{{region}}"
     deploy-org: "{{organization}}"
     deploy-space: "{{space}}"
-    route-domain: "{{domain}}"
-    branch: "{{branch}}"
+    #route-domain: "{{domain}}"
+    #branch: "{{branch}}"
     context-path: "micro"
