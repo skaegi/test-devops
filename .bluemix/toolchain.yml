@@ -2,6 +2,11 @@
 name: "What is for dinner Toolchain"
 description: "Microservices Cloud Foundry reference application Toolchain"
 version: 0.1
+
+toolchain:
+  name: "blabla"
+  test: "bleble"
+
 required:
  - deploy
 
