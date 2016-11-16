@@ -316,9 +316,9 @@ deploy:
     $ref: deployment_schema.json
   service-category: pipeline
   parameters:
-    deploy-region: "{{region}}"
-    deploy-org: "{{organization}}"
-    deploy-space: "{{space}}"
+    #deploy-region: "{{region}}"
+    #deploy-org: "{{organization}}"
+    #deploy-space: "{{space}}"
     route-domain: "mybluemix.net"
     context-path: "micro"
 deploybis:
