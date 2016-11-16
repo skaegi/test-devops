@@ -5,7 +5,6 @@ version: 0.1
 
 toolchain:
   name: "blabla"
-  test: "bleble"
 
 required:
  - deploy
@@ -323,5 +322,5 @@ deploy:
     deploy-region: "{{region}}"
     deploy-org: "{{organization}}"
     deploy-space: "{{space}}"
-    route-domain: "{{domain}}"
+    route-domain: "{{domain:bleble}}"
     context-path: "micro"
