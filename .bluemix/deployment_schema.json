@@ -5,15 +5,15 @@
     "longDescription": "Information entered here will be used at deployment time.",
     "type": "object",
     "properties": {
-        "dev-region": {
+        "deploy-region": {
             "description": "Deploy to this Bluemix Region",
             "type": "string"
         },
-        "dev-org": {
+        "deploy-org": {
             "description": "Deploy to this Bluemix Organization",
             "type": "string"
         },
-        "dev-space": {
+        "deploy-space": {
             "description": "Deploy to this space",
             "type": "string"
         },
@@ -22,7 +22,7 @@
             "type": "string"
         }
     },
-    "required": ["dev-region", "dev-org", "dev-space", "route-domain"],
+    "required": ["deploy-region", "deploy-org", "deploy-space", "route-domain"],
     "form": [
         {
             "type": "validator",
@@ -61,15 +61,15 @@
                 },
                 {
                     "type": "select",
-                    "key": "dev-region"
+                    "key": "deploy-region"
                 },
                 {
                     "type": "select",
-                    "key": "dev-org"
+                    "key": "deploy-org"
                 },
                 {
                     "type": "select",
-                    "key": "dev-space",
+                    "key": "deploy-space",
                     "readonly": false
                 }
             ]

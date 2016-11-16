@@ -315,8 +315,8 @@ deploy:
     $ref: deployment_schema.json
   service-category: pipeline
   parameters:
-    dev-region: "{{region}}"
-    dev-org: "{{organization}}"
-    dev-space: "{{space}}"
+    deploy-region: "{{region}}"
+    deploy-org: "{{organization}}"
+    deploy-space: "{{space}}"
     route-domain: "{{domain}}"
     context-path: "micro"
