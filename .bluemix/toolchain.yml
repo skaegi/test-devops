@@ -4,6 +4,7 @@ description: "Microservices Cloud Foundry reference application Toolchain"
 version: 0.1
 required:
  - deploy
+ - deploybis
 
 #Github repos
 git-wfd-eureka:
@@ -311,6 +312,16 @@ pipeline-wfd-menu-ui-cf:
   hidden: [form, description]
 
 deploy:
+  schema:
+    $ref: deployment_schema.json
+  service-category: pipeline
+  parameters:
+    deploy-region: "{{region}}"
+    deploy-org: "{{organization}}"
+    deploy-space: "{{space}}"
+    route-domain: "mybluemix.net"
+    context-path: "micro"
+deploybis:
   schema:
     $ref: deployment_schema.json
   service-category: pipeline
