@@ -12,7 +12,7 @@ git-wfd-eureka:
   service_id: githubpublic
   parameters:
     #repo_name: "eureka-ic-clone"
-    repo_url: "https://github.com/jesusmah/refarch-cloudnative-netflix-eureka"
+    repo_url: "https://github.com/jesusmah/eureka-ic-clone"
     type: link
     has_issues: false
 
@@ -20,7 +20,7 @@ git-wfd-config-server:
   service_id: githubpublic
   parameters:
     #repo_name: "config-ic-clone"
-    repo_url: "https://github.com/jesusmah/refarch-cloudnative-spring-config"
+    repo_url: "https://github.com/jesusmah/config-ic-clone"
     type: link
     has_issues: false
 
@@ -28,7 +28,7 @@ git-wfd-zuul:
   service_id: githubpublic
   parameters:
     #repo_name: "zuul-ic-clone"
-    repo_url: "https://github.com/jesusmah/refarch-cloudnative-netflix-zuul"
+    repo_url: "https://github.com/jesusmah/zuul-ic-clone"
     type: link
     has_issues: false
 
@@ -36,7 +36,7 @@ git-wfd-menu:
   service_id: githubpublic
   parameters:
     #repo_name: "menu-ic-clone"
-    repo_url: "https://github.com/jesusmah/refarch-cloudnative-wfd-menu"
+    repo_url: "https://github.com/jesusmah/menu-ic-clone"
     type: link
     has_issues: false
 
@@ -44,7 +44,7 @@ git-wfd-appetizer:
   service_id: githubpublic
   parameters:
     #repo_name: "appetizer-ic-clone"
-    repo_url: "https://github.com/jesusmah/refarch-cloudnative-wfd-appetizer"
+    repo_url: "https://github.com/jesusmah/appetizer-ic-clone"
     type: link
     has_issues: false
 
@@ -52,7 +52,7 @@ git-wfd-entree:
   service_id: githubpublic
   parameters:
     #repo_name: "entree-ic-clone"
-    repo_url: "https://github.com/jesusmah/refarch-cloudnative-wfd-entree"
+    repo_url: "https://github.com/jesusmah/entree-ic-clone"
     type: link
     has_issues: false
 
@@ -60,7 +60,7 @@ git-wfd-dessert:
   service_id: githubpublic
   parameters:
     #repo_name: "dessert-ic-clone"
-    repo_url: "https://github.com/jesusmah/refarch-cloudnative-wfd-dessert"
+    repo_url: "https://github.com/jesusmah/dessert-ic-clone"
     type: link
     has_issues: false
 
@@ -68,7 +68,7 @@ git-wfd-menu-ui:
   service_id: githubpublic
   parameters:
     #repo_name: "menu-ui-clone"
-    repo_url: "https://github.com/jesusmah/refarch-cloudnative-wfd-ui"
+    repo_url: "https://github.com/jesusmah/ui-ic-clone"
     type: link
     has_issues: false
 
