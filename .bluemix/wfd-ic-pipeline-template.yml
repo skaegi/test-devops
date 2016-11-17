@@ -172,7 +172,7 @@ stages:
     value: ${ROUTE_DOMAIN}
     type: text
   - name: ROUTE_HOSTNAME
-    value: ${NAME}
+    value: ${ROUTE_HOSTNAME}
     type: text
   - name: TEST_RESULT_FOR_AD
     value: ${TEST_RESULT_FOR_AD}

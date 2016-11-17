@@ -11,65 +11,65 @@ required:
 git-wfd-eureka:
   service_id: githubpublic
   parameters:
-    repo_name: "eureka-ic-clone"
-    repo_url: "https://github.com/ibm-cloud-architecture/refarch-cloudnative-netflix-eureka"
-    type: clone
+    #repo_name: "eureka-ic-clone"
+    repo_url: "https://github.com/jesusmah/refarch-cloudnative-netflix-eureka"
+    type: link
     has_issues: false
 
 git-wfd-config-server:
   service_id: githubpublic
   parameters:
-    repo_name: "config-ic-clone"
-    repo_url: "https://github.com/ibm-cloud-architecture/refarch-cloudnative-spring-config"
-    type: clone
+    #repo_name: "config-ic-clone"
+    repo_url: "https://github.com/jesusmah/refarch-cloudnative-spring-config"
+    type: link
     has_issues: false
 
 git-wfd-zuul:
   service_id: githubpublic
   parameters:
-    repo_name: "zuul-ic-clone"
-    repo_url: "https://github.com/ibm-cloud-architecture/refarch-cloudnative-netflix-zuul"
-    type: clone
+    #repo_name: "zuul-ic-clone"
+    repo_url: "https://github.com/jesusmah/refarch-cloudnative-netflix-zuul"
+    type: link
     has_issues: false
 
 git-wfd-menu:
   service_id: githubpublic
   parameters:
-    repo_name: "menu-ic-clone"
-    repo_url: "https://github.com/ibm-cloud-architecture/refarch-cloudnative-wfd-menu"
-    type: clone
+    #repo_name: "menu-ic-clone"
+    repo_url: "https://github.com/jesusmah/refarch-cloudnative-wfd-menu"
+    type: link
     has_issues: false
 
 git-wfd-appetizer:
   service_id: githubpublic
   parameters:
-    repo_name: "appetizer-ic-clone"
-    repo_url: "https://github.com/ibm-cloud-architecture/refarch-cloudnative-wfd-appetizer"
-    type: clone
+    #repo_name: "appetizer-ic-clone"
+    repo_url: "https://github.com/jesusmah/refarch-cloudnative-wfd-appetizer"
+    type: link
     has_issues: false
 
 git-wfd-entree:
   service_id: githubpublic
   parameters:
-    repo_name: "entree-ic-clone"
-    repo_url: "https://github.com/ibm-cloud-architecture/refarch-cloudnative-wfd-entree"
-    type: clone
+    #repo_name: "entree-ic-clone"
+    repo_url: "https://github.com/jesusmah/refarch-cloudnative-wfd-entree"
+    type: link
     has_issues: false
 
 git-wfd-dessert:
   service_id: githubpublic
   parameters:
-    repo_name: "dessert-ic-clone"
-    repo_url: "https://github.com/ibm-cloud-architecture/refarch-cloudnative-wfd-dessert"
-    type: clone
+    #repo_name: "dessert-ic-clone"
+    repo_url: "https://github.com/jesusmah/refarch-cloudnative-wfd-dessert"
+    type: link
     has_issues: false
 
 git-wfd-menu-ui:
   service_id: githubpublic
   parameters:
-    repo_name: "menu-ui-clone"
-    repo_url: "https://github.com/ibm-cloud-architecture/refarch-cloudnative-wfd-ui"
-    type: clone
+    #repo_name: "menu-ui-clone"
+    repo_url: "https://github.com/jesusmah/refarch-cloudnative-wfd-ui"
+    type: link
     has_issues: false
 
 #Pipelines
@@ -171,6 +171,7 @@ pipeline-wfd-appetizer:
        IGNORE_MAPPING_ROUTE: "yes"
        BRIDGE_APP: "container_bridge_app"
        ROUTE_DOMAIN: "{{deploy.parameters.deploy-org}}"
+       ROUTE_HOSTNAME: "{{pipeline-wfd-menu-ui.parameters.name}}"
        TEST_RESULT_FOR_AD: "1"
        GROUP_SIZE: "1"
        DEBUG: null
@@ -211,6 +212,7 @@ pipeline-wfd-entree:
        IGNORE_MAPPING_ROUTE: "yes"
        BRIDGE_APP: "container_bridge_app"
        ROUTE_DOMAIN: "{{deploy.parameters.deploy-org}}"
+       ROUTE_HOSTNAME: "{{pipeline-wfd-menu-ui.parameters.name}}"
        TEST_RESULT_FOR_AD: "1"
        GROUP_SIZE: "1"
        DEBUG: null
@@ -251,6 +253,7 @@ pipeline-wfd-dessert:
        IGNORE_MAPPING_ROUTE: "yes"
        BRIDGE_APP: "container_bridge_app"
        ROUTE_DOMAIN: "{{deploy.parameters.deploy-org}}"
+       ROUTE_HOSTNAME: "{{pipeline-wfd-menu-ui.parameters.name}}"
        TEST_RESULT_FOR_AD: "1"
        GROUP_SIZE: "1"
        DEBUG: null
@@ -291,6 +294,7 @@ pipeline-wfd-menu:
        IGNORE_MAPPING_ROUTE: "yes"
        BRIDGE_APP: "container_bridge_app"
        ROUTE_DOMAIN: "{{deploy.parameters.deploy-org}}"
+       ROUTE_HOSTNAME: "{{pipeline-wfd-menu-ui.parameters.name}}"
        TEST_RESULT_FOR_AD: "1"
        GROUP_SIZE: "1"
        DEBUG: null
@@ -331,6 +335,7 @@ pipeline-wfd-zuul:
        IGNORE_MAPPING_ROUTE: null
        BRIDGE_APP: "container_bridge_app"
        ROUTE_DOMAIN: "{{deploy.parameters.deploy-org}}"
+       ROUTE_HOSTNAME: "{{deploy.parameters.route-hostname}}"
        TEST_RESULT_FOR_AD: "1"
        GROUP_SIZE: "1"
        DEBUG: null
@@ -371,6 +376,7 @@ pipeline-wfd-menu-ui:
        IGNORE_MAPPING_ROUTE: "yes"
        BRIDGE_APP: "container_bridge_app"
        ROUTE_DOMAIN: "{{deploy.parameters.deploy-org}}"
+       ROUTE_HOSTNAME: "{{pipeline-wfd-menu-ui.parameters.name}}"
        TEST_RESULT_FOR_AD: "1"
        GROUP_SIZE: "1"
        DEBUG: null
