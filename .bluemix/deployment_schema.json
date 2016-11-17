@@ -21,12 +21,20 @@
             "description": "Domain name. Example: mybluemix.net for runtimes in US-South",
             "type": "string"
         },
+        "route-hostname": {
+            "description": "Hostname for the app. Example: myappbluemix",
+            "type": "string"
+        },
         "branch": {
             "description": "Branch to build from. Example: master",
             "type": "string"
+        },
+        "unique-identifier": {
+            "description": "Unique identifier to make your apps unique your space. Example: your surname",
+            "type": "string"
         }
     },
-    "required": ["deploy-region", "deploy-org", "deploy-space", "route-domain", "branch"],
+    "required": ["deploy-region", "deploy-org", "deploy-space", "route-domain", "route-hostname", "branch", "unique-identifier"],
     "form": [
         {
             "type": "validator",
@@ -41,8 +49,20 @@
         {
             "type": "text",
             "readonly": false,
+            "title": "Hostname for your app",
+            "key": "route-hostname"
+        },
+        {
+            "type": "text",
+            "readonly": false,
             "title": "Branch to build from",
             "key": "branch"
+        },
+        {
+            "type": "text",
+            "readonly": false,
+            "title": "Unique Identifier",
+            "key": "unique-identifier"
         },
         {
             "type": "table",
