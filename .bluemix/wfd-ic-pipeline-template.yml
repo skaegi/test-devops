@@ -299,6 +299,8 @@ stages:
       # -------------- #
       if [[ -n ${DEBUG} ]]; then set -x ; fi
 
+      export TEST_RESULT_FOR_AD=0
+
       echo "No test carried out"
   - name: Active Deploy - Complete
     type: deployer
