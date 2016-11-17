@@ -67,8 +67,8 @@ git-wfd-dessert:
 git-wfd-menu-ui:
   service_id: githubpublic
   parameters:
-    #repo_name: "menu-ui-clone"
-    repo_url: "https://github.com/jesusmah/ui-ic-clone"
+    #repo_name: "menu-ui-ic-clone"
+    repo_url: "https://github.com/jesusmah/menu-ui-ic-clone"
     type: link
     has_issues: false
 
