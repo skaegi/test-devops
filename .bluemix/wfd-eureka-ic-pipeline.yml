@@ -199,7 +199,7 @@ stages:
     value: ${UNIQUE_IDENTIFIER}
     type: text
   - name: EUREKA_CONTAINER_GR_ID
-    value: null
+    value: "null"
     type: text
   - name: EUREKA_CONTAINER_GR_IP
     value: null
