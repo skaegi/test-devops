@@ -11,7 +11,7 @@ required:
 git-wfd-eureka:
   service_id: githubpublic
   parameters:
-    repo_url: "https://github.com/jesusmah/eureka-ic-clone"
+    repo_url: "https://github.com/skaegi/eureka-ic-clone"
     type: link
     has_issues: false
 
