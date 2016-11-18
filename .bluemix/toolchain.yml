@@ -88,7 +88,7 @@ pipeline-wfd-eureka:
        BRANCH: "{{deploy.parameters.branch}}"
        # Build container stage env variables
        REGION: "{{deploy.parameters.deploy-region}}"
-       ORG: "{{deploy.parameters.deploy-org}}"
+       ORG: "{{deploy.parameters.deploy-organization}}"
        SPACE: "{{deploy.parameters.deploy-space}}"
        NAME: "{{pipeline-wfd-eureka.parameters.name}}"
        LABEL_PREFIX: "toolchain"
@@ -131,7 +131,7 @@ pipeline-wfd-eureka:
 #       BRANCH: "{{deploy.parameters.branch}}"
 #       # Build container stage env variables
 #       REGION: "{{deploy.parameters.deploy-region}}"
-#       ORG: "{{deploy.parameters.deploy-org}}"
+#       ORG: "{{deploy.parameters.deploy-organization}}"
 #       SPACE: "{{deploy.parameters.deploy-space}}"
 #       NAME: "{{pipeline-wfd-config.parameters.name}}"
 #       LABEL_PREFIX: "toolchain"
@@ -175,7 +175,7 @@ pipeline-wfd-eureka:
 #       BRANCH: "{{deploy.parameters.branch}}"
 #       # Build container stage env variables
 #       REGION: "{{deploy.parameters.deploy-region}}"
-#       ORG: "{{deploy.parameters.deploy-org}}"
+#       ORG: "{{deploy.parameters.deploy-organization}}"
 #       SPACE: "{{deploy.parameters.deploy-space}}"
 #       NAME: "{{pipeline-wfd-appetizer.parameters.name}}"
 #       LABEL_PREFIX: "toolchain"
@@ -216,7 +216,7 @@ pipeline-wfd-eureka:
 #       BRANCH: "{{deploy.parameters.branch}}"
 #       # Build container stage env variables
 #       REGION: "{{deploy.parameters.deploy-region}}"
-#       ORG: "{{deploy.parameters.deploy-org}}"
+#       ORG: "{{deploy.parameters.deploy-organization}}"
 #       SPACE: "{{deploy.parameters.deploy-space}}"
 #       NAME: "{{pipeline-wfd-entree.parameters.name}}"
 #       LABEL_PREFIX: "toolchain"
@@ -257,7 +257,7 @@ pipeline-wfd-eureka:
 #       BRANCH: "{{deploy.parameters.branch}}"
 #       # Build container stage env variables
 #       REGION: "{{deploy.parameters.deploy-region}}"
-#       ORG: "{{deploy.parameters.deploy-org}}"
+#       ORG: "{{deploy.parameters.deploy-organization}}"
 #       SPACE: "{{deploy.parameters.deploy-space}}"
 #       NAME: "{{pipeline-wfd-dessert.parameters.name}}"
 #       LABEL_PREFIX: "toolchain"
@@ -298,7 +298,7 @@ pipeline-wfd-eureka:
 #       BRANCH: "{{deploy.parameters.branch}}"
 #       # Build container stage env variables
 #       REGION: "{{deploy.parameters.deploy-region}}"
-#       ORG: "{{deploy.parameters.deploy-org}}"
+#       ORG: "{{deploy.parameters.deploy-organization}}"
 #       SPACE: "{{deploy.parameters.deploy-space}}"
 #       NAME: "{{pipeline-wfd-menu.parameters.name}}"
 #       LABEL_PREFIX: "toolchain"
@@ -339,7 +339,7 @@ pipeline-wfd-eureka:
 #       BRANCH: "{{deploy.parameters.branch}}"
 #       # Build container stage env variables
 #       REGION: "{{deploy.parameters.deploy-region}}"
-#       ORG: "{{deploy.parameters.deploy-org}}"
+#       ORG: "{{deploy.parameters.deploy-organization}}"
 #       SPACE: "{{deploy.parameters.deploy-space}}"
 #       NAME: "{{pipeline-wfd-zuul.parameters.name}}"
 #       LABEL_PREFIX: "toolchain"
@@ -380,7 +380,7 @@ pipeline-wfd-eureka:
 #       BRANCH: "{{deploy.parameters.branch}}"
 #       # Build container stage env variables
 #       REGION: "{{deploy.parameters.deploy-region}}"
-#       ORG: "{{deploy.parameters.deploy-org}}"
+#       ORG: "{{deploy.parameters.deploy-organization}}"
 #       SPACE: "{{deploy.parameters.deploy-space}}"
 #       NAME: "{{pipeline-wfd-menu-ui.parameters.name}}"
 #       LABEL_PREFIX: "toolchain"
@@ -412,7 +412,7 @@ deploy:
   service-category: pipeline
   parameters:
     deploy-region: "{{region}}"
-    deploy-org: "{{organization}}"
+    deploy-organization: "{{organization}}"
     deploy-space: "{{space}}"
     route-domain: "mybluemix.net"
     route-hostname: "mymenu"

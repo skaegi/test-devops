@@ -9,7 +9,7 @@
             "description": "Deploy to this Bluemix Region",
             "type": "string"
         },
-        "deploy-org": {
+        "deploy-organization": {
             "description": "Deploy to this Bluemix Organization",
             "type": "string"
         },
@@ -34,7 +34,7 @@
             "type": "string"
         }
     },
-    "required": ["deploy-region", "deploy-org", "deploy-space", "route-domain", "route-hostname", "branch", "unique-identifier"],
+    "required": ["deploy-region", "deploy-organization", "deploy-space", "route-domain", "route-hostname", "branch", "unique-identifier"],
     "form": [
         {
             "type": "validator",
@@ -95,7 +95,7 @@
                 },
                 {
                     "type": "select",
-                    "key": "deploy-org"
+                    "key": "deploy-organization"
                 },
                 {
                     "type": "select",
