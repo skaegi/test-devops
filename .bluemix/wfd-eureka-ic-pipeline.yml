@@ -196,12 +196,6 @@ stages:
   - name: SERVICE_DISCOVERY_UPS
     value: ${SERVICE_DISCOVERY_UPS}
     type: text
-  - name: EUREKA_CONTAINER_GR_ID
-    value: null
-    type: text
-  - name: EUREKA_CONTAINER_GR_IP
-    value: null
-    type: text
   - name: UNIQUE_IDENTIFIER
     value: ${UNIQUE_IDENTIFIER}
     type: text
