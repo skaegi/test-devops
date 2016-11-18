@@ -112,6 +112,8 @@ pipeline-wfd-eureka:
        RAMPDOWN_DURATION: "1s"
        RAMPUP_DURATION: "1s"
        UNIQUE_IDENTIFIER: "{{deploy.parameters.unique-identifier}}"
+       EUREKA_CONTAINER_GR_IP: null
+       EUREKA_CONTAINER_GR_ID: null
       execute: false
     services: ["git-wfd-eureka"]
   hidden: [form, description]
@@ -156,6 +158,8 @@ pipeline-wfd-config:
        RAMPDOWN_DURATION: "1s"
        RAMPUP_DURATION: "1s"
        UNIQUE_IDENTIFIER: "{{deploy.parameters.unique-identifier}}"
+       CS_CONTAINER_GR_IP: null
+       CS_CONTAINER_GR_ID: null
       execute: false
     services: ["git-wfd-config-server"]
   hidden: [form, description]
