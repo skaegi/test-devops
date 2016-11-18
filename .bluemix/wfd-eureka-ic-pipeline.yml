@@ -118,7 +118,6 @@ stages:
         # Copy any artifacts that will be needed for deployment and testing to $WORKSPACE    #
         ######################################################################################
         echo "IMAGE_NAME=${FULL_REPOSITORY_NAME}" >> $ARCHIVE_DIR/build.properties
-
 - name: Deploy
   inputs:
   - type: job
@@ -195,12 +194,6 @@ stages:
     type: text
   - name: SERVICE_DISCOVERY_UPS
     value: ${SERVICE_DISCOVERY_UPS}
-    type: text
-  - name: EUREKA_CONTAINER_GR_ID
-    value: null
-    type: text
-  - name: EUREKA_CONTAINER_GR_IP
-    value: null
     type: text
   - name: UNIQUE_IDENTIFIER
     value: ${UNIQUE_IDENTIFIER}
