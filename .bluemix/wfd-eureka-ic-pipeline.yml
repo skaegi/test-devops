@@ -3,7 +3,7 @@ stages:
 - name: Build Java Projects
   inputs:
   - type: git
-    branch: BUILD
+    branch: ${BRANCH}
     service: ${REPO}
   triggers:
   - type: commit
@@ -118,6 +118,7 @@ stages:
         # Copy any artifacts that will be needed for deployment and testing to $WORKSPACE    #
         ######################################################################################
         echo "IMAGE_NAME=${FULL_REPOSITORY_NAME}" >> $ARCHIVE_DIR/build.properties
+        
 - name: Deploy
   inputs:
   - type: job
@@ -344,7 +345,6 @@ stages:
         echo -e "${label_color}# ----------------------------- #${no_color}"
         echo -e "${label_color}# [END]: Updating microservices #${no_color}"
         echo -e "${label_color}# ----------------------------- #${no_color}"
-
   - name: Active Deploy - Begin
     type: deployer
     extension_id: ibm.devops.services.pipeline.devops.ad_start

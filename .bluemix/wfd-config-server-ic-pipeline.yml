@@ -3,7 +3,7 @@ stages:
 - name: Build Java Projects
   inputs:
   - type: git
-    branch: BUILD
+    branch: ${BRANCH}
     service: ${REPO}
   triggers:
   - type: commit
@@ -355,7 +355,7 @@ stages:
        echo -e "${label_color}# ----------------------------- #${no_color}"
        echo -e "${label_color}# [END]: Updating microservices #${no_color}"
        echo -e "${label_color}# ----------------------------- #${no_color}"
-       
+
   - name: Active Deploy - Begin
     type: deployer
     extension_id: ibm.devops.services.pipeline.devops.ad_start
