@@ -198,6 +198,12 @@ stages:
   - name: UNIQUE_IDENTIFIER
     value: ${UNIQUE_IDENTIFIER}
     type: text
+  - name: EUREKA_CONTAINER_GR_ID
+    value: null
+    type: text
+  - name: EUREKA_CONTAINER_GR_IP
+    value: null
+    type: text
   jobs:
   - name: Deploy Container Group
     type: deployer
