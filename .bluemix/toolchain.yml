@@ -76,7 +76,7 @@ git-wfd-eureka:
 pipeline-wfd-eureka:
   service_id: pipeline
   parameters:
-    name: "wfd-eureka-{{deploy.parameters.unique-identifier}}"
+    name: "wfd-eureka"
     ui-pipeline: true
     configuration:
       content: $file(wfd-eureka-ic-pipeline.yml)
