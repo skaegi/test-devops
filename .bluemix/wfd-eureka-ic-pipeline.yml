@@ -28,13 +28,11 @@ stages:
         cp ${BUILD_TARGET} ${DOCKER_DIR}/app.jar
         ls -al $PWD
         echo "Gradle build complete."
-
 - name: Build Docker Image
   inputs:
   - type: job
     stage: Build Java Projects
     job: Build Java
-    dir_name: null
   triggers:
   - type: stage
   properties:
@@ -118,7 +116,6 @@ stages:
       # Copy any artifacts that will be needed for deployment and testing to $WORKSPACE    #
       ######################################################################################
       echo "IMAGE_NAME=${FULL_REPOSITORY_NAME}" >> $ARCHIVE_DIR/build.properties
-
 - name: Deploy
   inputs:
   - type: job
