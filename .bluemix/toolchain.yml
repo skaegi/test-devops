@@ -40,20 +40,6 @@ pipeline-wfd-eureka:
        DESIRED_INSTANCES: "1"
        CONCURRENT_VERSIONS: "1"
        #AUTO_RECOVERY: "false" -- Commented out due to a bug declaring boolean variables
-       CONTAINER_SIZE: "micro"
-       IGNORE_MAPPING_ROUTE: "yes"
-       SERVICE_DISCOVERY_UPS: "eureka-service-discovery"
-       BRIDGE_APP: "container-bridge-app-{{deploy.parameters.unique-identifier}}"
-       PORT: "8761"
-       ROUTE_DOMAIN: "{{deploy.parameters.route-domain}}"
-       ROUTE_HOSTNAME: "{{pipeline-wfd-eureka.parameters.name}}"
-       TEST_RESULT_FOR_AD: "1"
-       GROUP_SIZE: "1"
-       DEBUG: null
-       GIT_HOME: "{{deploy.parameters.git-home}}"
-       RAMPDOWN_DURATION: "1s"
-       RAMPUP_DURATION: "1s"
-       UNIQUE_IDENTIFIER: "{{deploy.parameters.unique-identifier}}"
       execute: false
     services: ["git-wfd-eureka"]
   hidden: [form, description]
