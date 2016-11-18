@@ -28,7 +28,7 @@ stages:
         cp ${BUILD_TARGET} ${DOCKER_DIR}/app.jar
         ls -al $PWD
         echo "Gradle build complete."
-        
+
 - name: Build Docker Image
   inputs:
   - type: job
@@ -118,3 +118,103 @@ stages:
         # Copy any artifacts that will be needed for deployment and testing to $WORKSPACE    #
         ######################################################################################
         echo "IMAGE_NAME=${FULL_REPOSITORY_NAME}" >> $ARCHIVE_DIR/build.properties
+
+- name: Deploy
+  inputs:
+  - type: job
+    stage: Build Docker Image
+    job: Build container
+  triggers:
+  - type: stage
+  properties:
+  - name: MIN_INSTANCES
+    value: ${MIN_INSTANCES}
+    type: text
+  - name: MAX_INSTANCES
+    value: ${MAX_INSTANCES}
+    type: text
+  - name: DESIRED_INSTANCES
+    value: ${DESIRED_INSTANCES}
+    type: text
+  - name: CONCURRENT_VERSIONS
+    value: ${CONCURRENT_VERSIONS}
+    type: text
+  - name: AUTO_RECOVERY
+    value: 'false'
+    type: text
+  - name: CONTAINER_SIZE
+    value: ${CONTAINER_SIZE}
+    type: text
+  - name: IGNORE_MAPPING_ROUTE
+    value: ${IGNORE_MAPPING_ROUTE}
+    type: text
+  - name: BRIDGE_APP
+    value: ${BRIDGE_APP}
+    type: text
+  - name: BIND_TO
+    value: ${BRIDGE_APP}
+    type: text
+  - name: REGION
+    value: ${REGION}
+    type: text
+  - name: ORG
+    value: ${ORG}
+    type: text
+  - name: SPACE
+    value: ${SPACE}
+    type: text
+  - name: NAME
+    value: ${NAME}
+    type: text
+  - name: PORT
+    value: ${PORT}
+    type: text
+  - name: ROUTE_DOMAIN
+    value: ${ROUTE_DOMAIN}
+    type: text
+  - name: ROUTE_HOSTNAME
+    value: ${ROUTE_HOSTNAME}
+    type: text
+  - name: TEST_RESULT_FOR_AD
+    value: ${TEST_RESULT_FOR_AD}
+    type: text
+  - name: GROUP_SIZE
+    value: ${GROUP_SIZE}
+    type: text
+  - name: DEBUG
+    value: ${DEBUG}
+    type: text
+  - name: GIT_HOME
+    value: ${GIT_HOME}
+    type: text
+  - name: RAMPDOWN_DURATION
+    value: ${RAMPDOWN_DURATION}
+    type: text
+  - name: RAMPUP_DURATION
+    value: ${RAMPUP_DURATION}
+    type: text
+  - name: SERVICE_DISCOVERY_UPS
+    value: ${SERVICE_DISCOVERY_UPS}
+    type: text
+  - name: EUREKA_CONTAINER_GR_ID
+    value: null
+    type: text
+  - name: EUREKA_CONTAINER_GR_IP
+    value: null
+    type: text
+  - name: UNIQUE_IDENTIFIER
+    value: ${UNIQUE_IDENTIFIER}
+    type: text
+  jobs:
+  - name: Deploy Container Group
+    type: deployer
+    extension_id: ibm.devops.services.pipeline.docker.deploy.ice
+    target:
+      region_id: ${REGION}
+      organization: ${ORG}
+      space: ${SPACE}
+    DEPLOY_TYPE: simple
+    PORT: ${PORT}
+    CONTAINER_NAME: ${NAME}
+    COMMAND: |-
+        #!/bin/bash
