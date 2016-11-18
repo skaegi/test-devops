@@ -84,34 +84,34 @@ stages:
       FULL_REPOSITORY_NAME=${REGISTRY_URL}/${IMAGE_NAME}:${LABEL_PREFIX}${APPLICATION_VERSION}
       # If you wish to receive slack notifications, set SLACK_WEBHOOK_PATH as a property on the stage.
       if [ -f Dockerfile ]; then
-          log_and_echo "$LABEL" "Building ${FULL_REPOSITORY_NAME}"
-          ${EXT_DIR}/utilities/sendMessage.sh -l info -m "New container build requested for ${FULL_REPOSITORY_NAME}"
-          # build image
-          BUILD_COMMAND=""
-          if [ "${USE_CACHED_LAYERS}" == "true" ]; then
-              BUILD_COMMAND="build --pull --tag ${FULL_REPOSITORY_NAME} ${WORKSPACE}/${DOCKER_DIR}"
-              ice_retry ${BUILD_COMMAND}
-              RESULT=$?
-          else
-              BUILD_COMMAND="build --no-cache --tag ${FULL_REPOSITORY_NAME} ${WORKSPACE}/${DOCKER_DIR}"
-              ice_retry ${BUILD_COMMAND}
-              RESULT=$?
-          fi
-          if [ $RESULT -ne 0 ]; then
-              log_and_echo "$ERROR" "Error building image"
-              ice_retry info
-              ice_retry images
-              ${EXT_DIR}/print_help.sh
-              ${EXT_DIR}/utilities/sendMessage.sh -l bad -m "Container build of ${FULL_REPOSITORY_NAME} failed. $(get_error_info)"
-              exit 1
-          else
-              log_and_echo "$SUCCESSFUL" "Container build of ${FULL_REPOSITORY_NAME} was successful"
-              ${EXT_DIR}/utilities/sendMessage.sh -l good -m "Container build of ${FULL_REPOSITORY_NAME} was successful"
-          fi
-      else
-          log_and_echo "$ERROR" "Dockerfile not found in project"
-          ${EXT_DIR}/utilities/sendMessage.sh -l bad -m "Failed to get Dockerfile. $(get_error_info)"
+        log_and_echo "$LABEL" "Building ${FULL_REPOSITORY_NAME}"
+        ${EXT_DIR}/utilities/sendMessage.sh -l info -m "New container build requested for ${FULL_REPOSITORY_NAME}"
+        # build image
+        BUILD_COMMAND=""
+        if [ "${USE_CACHED_LAYERS}" == "true" ]; then
+          BUILD_COMMAND="build --pull --tag ${FULL_REPOSITORY_NAME} ${WORKSPACE}/${DOCKER_DIR}"
+          ice_retry ${BUILD_COMMAND}
+          RESULT=$?
+        else
+          BUILD_COMMAND="build --no-cache --tag ${FULL_REPOSITORY_NAME} ${WORKSPACE}/${DOCKER_DIR}"
+          ice_retry ${BUILD_COMMAND}
+          RESULT=$?
+        fi
+        if [ $RESULT -ne 0 ]; then
+          log_and_echo "$ERROR" "Error building image"
+          ice_retry info
+          ice_retry images
+          ${EXT_DIR}/print_help.sh
+          ${EXT_DIR}/utilities/sendMessage.sh -l bad -m "Container build of ${FULL_REPOSITORY_NAME} failed. $(get_error_info)"
           exit 1
+        else
+          log_and_echo "$SUCCESSFUL" "Container build of ${FULL_REPOSITORY_NAME} was successful"
+          ${EXT_DIR}/utilities/sendMessage.sh -l good -m "Container build of ${FULL_REPOSITORY_NAME} was successful"
+        fi
+      else
+        log_and_echo "$ERROR" "Dockerfile not found in project"
+        ${EXT_DIR}/utilities/sendMessage.sh -l bad -m "Failed to get Dockerfile. $(get_error_info)"
+        exit 1
       fi
 
       ######################################################################################
